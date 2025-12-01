@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Produto</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-store"></i> LojeTech
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="products.html" class="active"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="../users/users.html"><i class="fas fa-users"></i> Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-title">
+            <h1><i class="fas fa-box"></i> Novo Produto</h1>
+            <a href="products.html" class="btn">
+                <i class="fas fa-arrow-left"></i> Voltar para Produtos
+            </a>
+        </div>
+
+        <section class="form-container">
+            <div class="form-group">
+                <label for="nomeProduto"><i class="fas fa-tag"></i> <strong>Nome do Produto:</strong></label>
+                <input type="text" id="nomeProduto" placeholder="Digite o nome do produto">
+            </div>
+            
+            <div class="form-group">
+                <label for="preçoProduto"><i class="fas fa-dollar-sign"></i> <strong>Preço:</strong></label>
+                <input type="number" id="preçoProduto" placeholder="R$ 0,00" step="0.01">
+            </div>
+            
+            <div class="form-group">
+                <label for="marcaProduto"><i class="fas fa-industry"></i> <strong>Marca:</strong></label>
+                <input type="text" id="marcaProduto" placeholder="Digite a marca">
+            </div>
+            
+            <div class="form-group">
+                <label for="categoriaProduto"><i class="fas fa-list"></i> <strong>Categoria:</strong></label>
+                <input type="text" id="categoriaProduto" placeholder="Ex: Smartphone, Tablet, etc.">
+            </div>
+            
+            <div class="form-group">
+                <label for="descricaoProduto"><i class="fas fa-align-left"></i> <strong>Descrição:</strong></label>
+                <textarea id="descricaoProduto" placeholder="Digite a descrição do produto" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="fotoProduto"><i class="fas fa-camera"></i> <strong>URL da Foto:</strong></label>
+                <input type="url" id="fotoProduto" class="url-input" placeholder="https://exemplo.com/produto.jpg">
+            </div>
+
+            <div class="form-upload">
+                <div class="upload-container">
+                    <div class="upload-preview" id="fotoProdutoPreview">
+                        <div class="upload-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Digite uma URL para ver a imagem</p>
+                        </div>
+                    </div>
+                    <!-- botao pra limpar url -->
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="button" class="clear-btn" onclick="limparPreview()">
+                            <i class="fas fa-times"></i> Limpar Imagem
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-submit">
+                <button class="btn" onclick="validarProduto()">
+                    <i class="fas fa-check"></i> Cadastrar Produto
+                </button>
+            </div>
+            
+            <div class="form-voltar">
+                <button class="btn-voltar" onclick="voltarParaInicio()">
+                    <i class="fas fa-home"></i> Voltar para Início
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p><i class="fas fa-store"></i> <strong>LojeTech</strong> - Seu eletrônico dos sonhos aqui!</p>
+            <p>Explore nossa coleção exclusiva de tecnologia com preços imperdíveis e qualidade garantida!</p>
+            <p class="copyright">© 2025 LojeTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="form-produto.js"></script>
+</body>
+</html>

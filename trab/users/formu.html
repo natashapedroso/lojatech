@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Usuário</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-store"></i> LojeTech
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="../products/products.html"><i class="fas fa-box"></i> Produtos</a></li>
+                <li><a href="../users/users.html" class="active"><i class="fas fa-users"></i> Usuários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- TÍTULO DA PÁGINA -->
+        <div class="page-title">
+            <h1><i class="fas fa-user-plus"></i> Novo Usuário</h1>
+            <a href="../users/users.html" class="btn">
+                <i class="fas fa-arrow-left"></i> Voltar para Usuários
+            </a>
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <section class="form-container">
+            <div class="form-group">
+                <label for="nome"><i class="fas fa-user"></i> <strong>Nome:</strong></label>
+                <input type="text" id="nome" placeholder="Digite o nome do usuário">
+            </div>
+            
+            <div class="form-group">
+                <label for="sobrenome"><i class="fas fa-user-tag"></i> <strong>Sobrenome:</strong></label>
+                <input type="text" id="sobrenome" placeholder="Digite o sobrenome">
+            </div>
+            
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> <strong>Email:</strong></label>
+                <input type="email" id="email" placeholder="usuario@exemplo.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtidade"><i class="fas fa-birthday-cake"></i> <strong>Idade:</strong></label>
+                <input type="number" id="txtidade" placeholder="Digite a idade">
+            </div>
+                
+            <!-- PARTE DAS FOTOS -->
+            <div class="form-group">
+                <label for="fotoUsuario"><i class="fas fa-camera"></i> <strong>URL da Foto (opcional):</strong></label>
+                <input type="url" id="fotoUsuario" class="url-input" placeholder="https://exemplo.com/foto.jpg">
+            </div>
+
+            <div class="form-upload">
+                <div class="upload-container">
+                    <div class="upload-preview" id="fotoUsuarioPreview">
+                        <div class="upload-placeholder">
+                            <i class="fas fa-user"></i>
+                            <p>Digite uma URL para ver a imagem</p>
+                        </div>
+                    </div>
+                    <!-- botao pra limpar url -->
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="button" class="clear-btn" onclick="limparPreview()">
+                            <i class="fas fa-times"></i> Limpar Imagem
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-submit">
+                <button class="btn" onclick="checar()">
+                    <i class="fas fa-check"></i> Cadastrar Usuário
+                </button>
+            </div>
+            
+            <!-- botao pra voltar -->
+            <div class="form-voltar">
+                <button class="btn-voltar" onclick="voltarParaInicio()">
+                    <i class="fas fa-home"></i> Voltar para Início
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p><i class="fas fa-store"></i> <strong>LojeTech</strong> - Seu eletrônico dos sonhos aqui!</p>
+            <p>Explore nossa coleção exclusiva de tecnologia com preços imperdíveis e qualidade garantida!</p>
+            <p class="copyright">© 2025 LojeTech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="form-usuario.js"></script>
+</body>
+</html>
